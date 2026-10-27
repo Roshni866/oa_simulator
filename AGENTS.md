@@ -21,6 +21,7 @@ When these documents disagree, update them together and treat this file as the r
 - Keep the first version modular but small; do not add infrastructure without a concrete requirement.
 - Submitted code is untrusted. Never execute it inside the main backend process.
 - AI credentials belong only on the backend. The application must remain useful when AI is unavailable.
+- AI-generated assessments are untrusted content until they pass validation. Reference solutions, hidden tests, and scoring rules must be protected from premature exposure.
 
 ## Development standards
 
@@ -29,6 +30,7 @@ When these documents disagree, update them together and treat this file as the r
 - Preserve unrelated user work; never use destructive Git commands without explicit approval.
 - Keep secrets out of source control. Add new environment variables to `.env.example` with safe placeholder values.
 - Do not claim a test passed unless it was run successfully.
+- Do not mark an assessment feature complete until its acceptance criteria and validation behavior have been verified.
 
 ## Workflow
 
